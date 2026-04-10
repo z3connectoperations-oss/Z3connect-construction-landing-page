@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import { db } from '@/lib/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
+// Required for Cloudflare Pages deployment
+export const runtime = 'edge';
+
 export async function POST(req: Request) {
   try {
     const data = await req.json();
