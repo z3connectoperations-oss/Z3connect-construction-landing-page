@@ -17,9 +17,9 @@ const firebaseConfig = {
 // Initialize Firebase (prevent re-initialization in Next.js hot reloads)
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// Firebase services
-const db = getFirestore(app);
-const auth = getAuth(app);
-const storage = getStorage(app);
+// Lazy-initialize Firebase services to prevent build-time hangs
+const db = typeof window !== "undefined" ? getFirestore(app) : null;
+const auth = typeof window !== "undefined" ? getAuth(app) : null;
+const storage = typeof window !== "undefined" ? getStorage(app) : null;
 
 export { app, db, auth, storage };

@@ -24,6 +24,10 @@ export default function ContactSection() {
     };
 
     try {
+      if (!db) {
+        throw new Error("Database service is not initialized. Please refresh and try again.");
+      }
+
       // Write to Firestore Collection "contacts"
       await addDoc(collection(db, "contacts"), {
         ...data,
