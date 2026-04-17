@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { db } from "@/lib/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 export default function ContactSection() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -22,13 +24,12 @@ export default function ContactSection() {
     };
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      // Write to Firestore Collection "contacts"
+      await addDoc(collection(db, "contacts"), {
+        ...data,
+        createdAt: new Date().toISOString(),
+        status: "new",
       });
-
-      if (!response.ok) throw new Error("Failed to submit form");
       
       setStatus("success");
       // @ts-ignore - native reset method
