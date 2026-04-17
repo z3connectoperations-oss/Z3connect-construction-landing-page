@@ -44,16 +44,16 @@ export default function ProblemSection() {
 
         <div className="bg-surface-container-low rounded-2xl md:rounded-[3rem] p-6 md:p-8 shadow-inner mt-8 md:mt-0">
           <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-4 md:p-6 border-l-4 md:border-l-8 border-error mb-4">
-            <p className="text-[10px] md:text-xs font-black text-error mb-2 uppercase tracking-tighter">Site Mess</p>
-            <div className="flex gap-2 mb-4 overflow-x-auto no-scrollbar pb-2">
-              <div className="min-w-[100px] md:min-w-[120px] h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] text-center p-2 italic text-slate-400">
+            <p className="text-[10px] md:text-xs font-black text-error mb-3 uppercase tracking-tighter">Site Mess</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3 mb-2">
+              <div className="w-full h-16 sm:h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] sm:text-xs text-center p-2 italic text-slate-400">
                 Photo of messy bill
               </div>
-              <div className="min-w-[100px] md:min-w-[120px] h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] text-center p-2 italic text-slate-400">
-                Audio note: "Send sand"
+              <div className="w-full h-16 sm:h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] sm:text-xs text-center p-2 italic text-slate-400">
+                Audio: "Send sand"
               </div>
-              <div className="min-w-[100px] md:min-w-[120px] h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] text-center p-2 italic text-slate-400">
-                Blurred attendance sheet
+              <div className="w-full h-16 sm:h-20 md:h-24 bg-slate-100 rounded-lg flex items-center justify-center text-[10px] sm:text-xs text-center p-2 italic text-slate-400">
+                Blurred attendance
               </div>
             </div>
           </div>
@@ -61,19 +61,19 @@ export default function ProblemSection() {
             <span className="material-symbols-outlined text-slate-300 text-3xl md:text-4xl animate-bounce" data-icon="arrow_downward">arrow_downward</span>
           </div>
           <div className="bg-primary text-white rounded-xl md:rounded-2xl shadow-xl p-4 md:p-6 border-l-4 md:border-l-8 border-secondary">
-            <p className="text-[10px] md:text-xs font-black text-secondary mb-2 uppercase tracking-tighter">Z3connect Flow</p>
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs md:text-sm py-2 border-b border-white/10">
+            <p className="text-[10px] md:text-xs font-black text-secondary mb-3 uppercase tracking-tighter">Z3connect Flow</p>
+            <div className="space-y-1">
+              <div className="flex flex-wrap justify-between items-center text-[10px] sm:text-xs md:text-sm py-2 border-b border-white/10 gap-2">
                 <span>Verified Invoice</span>
-                <span className="text-green-400">✔ AUTO-GST</span>
+                <span className="text-green-400 shrink-0">✔ AUTO-GST</span>
               </div>
-              <div className="flex justify-between text-xs md:text-sm py-2 border-b border-white/10">
+              <div className="flex flex-wrap justify-between items-center text-[10px] sm:text-xs md:text-sm py-2 border-b border-white/10 gap-2">
                 <span>Biometric Sync</span>
-                <span className="text-green-400">✔ 100% ACCURATE</span>
+                <span className="text-green-400 shrink-0">✔ 100% ACCURATE</span>
               </div>
-              <div className="flex justify-between text-xs md:text-sm py-2">
+              <div className="flex flex-wrap justify-between items-center text-[10px] sm:text-xs md:text-sm py-2 gap-2">
                 <span>BOQ Status</span>
-                <span className="text-green-400">✔ WITHIN MARGIN</span>
+                <span className="text-green-400 shrink-0">✔ WITHIN MARGIN</span>
               </div>
             </div>
           </div>
